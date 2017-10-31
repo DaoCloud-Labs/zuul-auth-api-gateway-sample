@@ -7,13 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AuthorizeFilter extends ZuulFilter {
+public class AuthorizationFilter extends ZuulFilter {
 
     private final AuthorizeService authorizeService;
     private final static Integer FILTER_ORDER = 0;
 
     @Autowired
-    public AuthorizeFilter(AuthorizeService authorizeService) {
+    public AuthorizationFilter(AuthorizeService authorizeService) {
         this.authorizeService = authorizeService;
     }
 
